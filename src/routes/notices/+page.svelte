@@ -1,0 +1,1 @@
+<h1>Notices Page</h1><p>This is the Notices page.</p> 

@@ -1,0 +1,1 @@
+<h1>Direqt Messages Page</h1><p>This is the Direqt Messages page.</p> 

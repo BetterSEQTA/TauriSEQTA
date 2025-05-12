@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-  app_lib::run();
+    tauriseqta_lib::run() // Entrypoint for Rust code in Tauri
 }

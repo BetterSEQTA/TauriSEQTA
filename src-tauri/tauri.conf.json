@@ -1,22 +1,20 @@
 {
-  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "bsclient",
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "tauriseqta",
   "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.tauriseqta.app",
   "build": {
-    "frontendDist": "../dist",
-    "devUrl": "http://localhost:5173",
-    "beforeDevCommand": "yarn dev",
-    "beforeBuildCommand": "yarn build"
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../build"
   },
   "app": {
     "windows": [
       {
-        "title": "bsclient",
+        "title": "tauriseqta",
         "width": 800,
-        "height": 600,
-        "resizable": true,
-        "fullscreen": false
+        "height": 600
       }
     ],
     "security": {
