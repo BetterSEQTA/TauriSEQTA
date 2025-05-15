@@ -35,7 +35,7 @@ Run the script
 npm run tauri dev
 ```
 > [!IMPORTANT]  
-> To run the dev script youy MUST have both [rust cargo](https://www.rust-lang.org/tools/install) and pnpm (`npm install -g pnpm`) on your system or it will not build
+> To run the dev script youy MUST have both [rust cargo](https://www.rust-lang.org/tools/install) and pnpm (`npm install -g pnpm`) on your system or it will not build.
 
 
 ## Folder Structure
