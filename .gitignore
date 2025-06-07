@@ -143,3 +143,5 @@ yarn.lock
 
 build/
 .svelte-kit/
+
+.cursor

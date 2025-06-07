@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary-color: #3b82f6;
+	--accent-color: #3b82f6;
+	--accent-color-hover: #2563eb;
+	--accent-color-light: #93c5fd;
+	--accent-color-dark: #1e40af;
+	--accent-color-active: #1d4ed8;
+	--accent-color-disabled: #93c5fd;
+	--accent-color-text: #ffffff;
+	//--background: #121212;
+	//--surface: #18191c;
+	//--surface-alt: #232428;
+	//--text: #f3f4f6;
+	//--text-muted: #a1a1aa;
+}
+
+:root[data-theme="light"] {
+	--bg-primary: #ffffff;
+	--bg-secondary: #f3f4f6;
+	--bg-tertiary: #e5e7eb;
+	--text-primary: #1f2937;
+	--text-secondary: #4b5563;
+	--text-tertiary: #6b7280;
+	--border-color: #d1d5db;
+	--shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] {
+	--bg-primary: #0f172a;
+	--bg-secondary: #1e293b;
+	--bg-tertiary: #334155;
+	--text-primary: #f3f4f6;
+	--text-secondary: #e5e7eb;
+	--text-tertiary: #d1d5db;
+	--border-color: #475569;
+	--shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+	@apply antialiased;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+	background: #111827; /* slate-900 */
+	width: 8px;
+	border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background: #3b82f6; /* blue-500 */
+	border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #2563eb; /* blue-600 */
+}
+::-webkit-scrollbar-corner {
+	background: #111827; /* slate-900 */
+}
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #3b82f6 #111827;
+}
+
+/* Make calendar icon in date inputs white on dark backgrounds */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Dynamic accent color classes */
+.accent-bg {
+  background-color: var(--accent-color);
+}
+
+.accent-bg-hover:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+.accent-border {
+  border-color: var(--accent-color);
+}
+
+.accent-ring {
+  --tw-ring-color: var(--accent-color);
+}
+
+.accent-shadow {
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Update accent color variables when the store changes */
+:root[data-accent-color] {
+  --accent-color: var(--accent-color-value);
+  --accent-color-hover: color-mix(in srgb, var(--accent-color-value) 90%, black);
+  --accent-color-light: color-mix(in srgb, var(--accent-color-value) 20%, white);
+  --accent-color-dark: color-mix(in srgb, var(--accent-color-value) 90%, black);
+}
+
+/* Theme-specific styles */
+[data-theme="light"] {
+  @apply bg-white text-gray-900;
+}
+
+[data-theme="dark"] {
+  @apply bg-slate-900 text-white;
+}
+
+[data-theme="light"] .bg-slate-800\/50 {
+  @apply bg-gray-100/50;
+}
+
+[data-theme="light"] .bg-slate-900\/50 {
+  @apply bg-gray-200/50;
+}
+
+[data-theme="light"] .text-slate-200 {
+  @apply text-gray-700;
+}
+
+[data-theme="light"] .text-slate-400 {
+  @apply text-gray-500;
+}
+
+[data-theme="light"] .border-slate-700\/50 {
+  @apply border-gray-300/50;
+}
+
+[data-theme="light"] .hover\:bg-slate-600\/50:hover {
+  @apply hover:bg-gray-200/50;
+}
+
+[data-theme="light"] .hover\:bg-slate-700\/50:hover {
+  @apply hover:bg-gray-300/50;
+}
+
+[data-theme="light"] .bg-slate-700\/50 {
+  @apply bg-gray-200/50;
+}
+
+[data-theme="light"] .bg-slate-800 {
+  @apply bg-gray-100;
+}
+
+[data-theme="light"] .bg-slate-900 {
+  @apply bg-gray-50;
+} 

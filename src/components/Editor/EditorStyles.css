@@ -1,0 +1,115 @@
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  width: 100%;
+  min-width: 2px !important;
+}
+
+.ProseMirror h1, .ProseMirror h2, .ProseMirror h3 {
+  margin-bottom: 0.5rem;
+}
+
+.ProseMirror p::before, .ProseMirror h1::before, .ProseMirror h2::before, .ProseMirror h3::before, .ProseMirror h4::before, .ProseMirror h5::before, .ProseMirror h6::before {
+  content: attr(data-placeholder);
+  color: #adb5bd;
+  float: left;
+  height: 0;
+}
+
+.ProseMirror p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+ul[data-type="taskList"] {
+	list-style: none;
+	padding: 0;
+}
+
+ul[data-type="taskList"] p {
+	margin: 0;
+}
+
+ul[data-type="taskList"] li {
+	display: flex;
+}
+
+ul[data-type="taskList"] li > label {
+	flex: 0 0 auto;
+	margin-right: 0.5rem;
+	user-select: none;
+}
+
+ul[data-type="taskList"] li > div {
+	flex: 1 1 auto;
+  margin: 3px 0;
+}
+
+
+.bnEditor {
+  outline: none;
+  padding-inline: 50px;
+  border-radius: 8px;
+
+  /* Define a set of colors to be used throughout the app for consistency
+  see https://atlassian.design/foundations/color for more info */
+  --N800: #172b4d; /* Dark neutral used for tooltips and text on light background */
+  --N40: #dfe1e6; /* Light neutral used for subtle borders and text on dark background */
+}
+
+/*
+bnRoot should be applied to all top-level elements
+
+This includes the Prosemirror editor, but also <div> element such as 
+Tippy popups that are appended to document.body directly
+*/
+.bnRoot {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bnRoot *,
+.bnRoot *::before,
+.bnRoot *::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* reset styles, they will be set on blockContent */
+.defaultStyles p,
+.defaultStyles h1,
+.defaultStyles h2,
+.defaultStyles h3,
+.defaultStyles li {
+  all: unset !important;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  /* min width to make sure cursor is always visible */
+  min-width: 2px !important;
+}
+
+.defaultStyles {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="light"] {
+  background-color: #ffffff;
+  color: #444444;
+}
+
+[data-theme="dark"] {
+  background-color: #444444;
+  color: #dddddd;
+}
+
+.dragPreview {
+  position: absolute;
+  top: -1000px;
+}
