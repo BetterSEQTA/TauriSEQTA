@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply antialiased;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  background: #f1f5f9; /* slate-100 */
+  width: 8px;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar {
+    background: #111827; /* slate-900 */
+  }
+}
+::-webkit-scrollbar-thumb {
+  background: #64748b; /* slate-500 */
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* blue-500 */
+  }
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* slate-600 */
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* blue-600 */
+  }
+}
+::-webkit-scrollbar-corner {
+  background: #f1f5f9; /* slate-100 */
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-corner {
+    background: #111827; /* slate-900 */
+  }
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #64748b #f1f5f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    scrollbar-color: #3b82f6 #111827;
+  }
+}
+
+/* Make calendar icon in date inputs appropriate for theme */
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+}
+
+/* Dynamic accent color classes */
+.accent-bg {
+  background-color: var(--accent-color);
+}
+
+.accent-bg-hover:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+.accent-border {
+  border-color: var(--accent-color);
+}
+
+.accent-ring {
+  --tw-ring-color: var(--accent-color);
+}
+
+.accent-shadow {
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Update accent color variables when the store changes */
+:root[data-accent-color] {
+  --accent-color: var(--accent-color-value);
+  --accent-color-hover: color-mix(in srgb, var(--accent-color-value) 90%, black);
+  --accent-color-light: color-mix(in srgb, var(--accent-color-value) 20%, white);
+  --accent-color-dark: color-mix(in srgb, var(--accent-color-value) 90%, black);
+}
+
+/* prevent overscrolling on safari based browsers */
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
