@@ -143,3 +143,6 @@ yarn.lock
 
 build/
 .svelte-kit/
+
+.cursor
+pnpm-lock.yaml

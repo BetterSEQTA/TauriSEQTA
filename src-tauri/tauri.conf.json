@@ -1,35 +1,46 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "tauriseqta",
+  "productName": "DesQTA",
   "version": "0.1.0",
-  "identifier": "com.tauriseqta.app",
+  "identifier": "com.desqta.app",
   "build": {
-    "beforeDevCommand": "pnpm dev",
+    "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "pnpm build",
+    "beforeBuildCommand": "npm run build",
     "frontendDist": "../build"
   },
   "app": {
     "windows": [
       {
-        "title": "tauriseqta",
+        "title": "DesQTA",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "decorations": false,
+        "transparent": true
       }
     ],
     "security": {
       "csp": null
-    }
+    },
+    "macOSPrivateApi": true
   },
   "bundle": {
     "active": true,
     "targets": "all",
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser"
+      }
+    },
     "icon": [
-      "icons/32x32.png",
-      "icons/128x128.png",
-      "icons/128x128@2x.png",
-      "icons/icon.icns",
       "icons/icon.ico"
     ]
+  },
+  "plugins": {
+    "deep-link": {
+      "desktop": {
+      "schemes": ["desqta"]
+      }
+    }
   }
 }
