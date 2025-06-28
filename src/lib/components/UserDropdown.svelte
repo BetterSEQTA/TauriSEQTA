@@ -40,6 +40,7 @@
     onLogout: () => void;
     onShowAbout: () => void;
     onClickOutside: (event: MouseEvent) => void;
+    disableSchoolPicture?: boolean;
   }
 
   let {
@@ -48,7 +49,8 @@
     onToggleUserDropdown,
     onLogout,
     onShowAbout,
-    onClickOutside
+    onClickOutside,
+    disableSchoolPicture = false
   }: Props = $props();
 </script>
 
@@ -58,10 +60,16 @@
     onclick={onToggleUserDropdown}
     aria-label="User menu"
     tabindex="0">
-    <img
-      src={userInfo.profilePicture}
-      alt=""
-      class="object-cover w-8 h-8 rounded-full border-2 shadow-sm border-white/60 dark:border-slate-600/60" />
+    {#if !disableSchoolPicture && userInfo.profilePicture}
+      <img
+        src={userInfo.profilePicture}
+        alt=""
+        class="object-cover w-8 h-8 rounded-full border-2 shadow-sm border-white/60 dark:border-slate-600/60" />
+    {:else}
+      <div class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-white font-bold text-base border-2 shadow-sm border-white/60 dark:border-slate-600/60">
+        {userInfo.displayName ? userInfo.displayName[0] : userInfo.userName[0]}
+      </div>
+    {/if}
     <span class="hidden font-semibold text-slate-900 md:inline dark:text-white">
       {userInfo.userDesc || userInfo.userName}
     </span>

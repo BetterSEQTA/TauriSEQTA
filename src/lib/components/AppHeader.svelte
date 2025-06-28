@@ -25,6 +25,7 @@
     onLogout: () => void;
     onShowAbout: () => void;
     onClickOutside: (event: MouseEvent) => void;
+    disableSchoolPicture?: boolean;
   }
 
   interface UserInfo {
@@ -71,7 +72,8 @@
     onClearNotifications,
     onLogout,
     onShowAbout,
-    onClickOutside
+    onClickOutside,
+    disableSchoolPicture = false
   }: Props = $props();
 
   const appWindow = Window.getCurrent();
@@ -118,6 +120,7 @@
         {onLogout}
         {onShowAbout}
         {onClickOutside}
+        disableSchoolPicture={disableSchoolPicture}
       />
     {/if}
 

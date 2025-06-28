@@ -1,5 +1,6 @@
 <script lang="ts">
   import { listen } from '@tauri-apps/api/event';
+  import { invoke } from '@tauri-apps/api/core';
   import AboutModal from '../lib/components/AboutModal.svelte';
   import AppHeader from '../lib/components/AppHeader.svelte';
   import AppSidebar from '../lib/components/AppSidebar.svelte';
@@ -52,6 +53,8 @@
   let showAboutModal = $state(false);
   let isLoading = $state(true);
 
+  let disableSchoolPicture = $state(false);
+
   function handleClickOutside(event: MouseEvent) {
     const target = event.target as Element;
     if (!target.closest('.user-dropdown-container')) {
@@ -103,8 +106,23 @@
     }
   }
 
+  async function loadSettingsForUserPicture() {
+    try {
+      const settings = await invoke<{
+        disable_school_picture?: boolean;
+      }>('get_settings');
+      console.log('Loaded settings for user picture:', settings);
+      disableSchoolPicture = settings.disable_school_picture ?? false;
+      console.log('disableSchoolPicture set to:', disableSchoolPicture);
+    } catch (e) {
+      console.error('Failed to load settings for user picture:', e);
+      disableSchoolPicture = false;
+    }
+  }
+
   async function loadUserInfo() {
-    userInfo = await authService.loadUserInfo();
+    await loadSettingsForUserPicture();
+    userInfo = await authService.loadUserInfo({ disableSchoolPicture });
   }
 
   async function loadWeatherSettings() {
@@ -243,6 +261,7 @@
       onLogout={handleLogout}
       onShowAbout={() => (showAboutModal = true)}
       onClickOutside={handleClickOutside}
+      disableSchoolPicture={disableSchoolPicture}
     />
 
     <div class="flex flex-1 min-h-0">
