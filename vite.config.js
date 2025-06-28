@@ -9,7 +9,7 @@ const host = process.env.TAURI_DEV_HOST;
 function cssAsText() {
   return {
     name: 'css-as-text',
-    load(id) {
+    load(/** @type {string} */ id) {
       if (id.endsWith('.css?text')) {
         const cssPath = id.replace('?text', '');
         const css = fs.readFileSync(cssPath, 'utf-8');
@@ -43,5 +43,8 @@ export default defineConfig(async () => ({
       // 3. tell vite to ignore watching `src-tauri`
       ignored: ["**/src-tauri/**"],
     },
+  },
+  build: {
+    chunkSizeWarningLimit: 1000,
   },
 }));
