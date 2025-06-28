@@ -74,6 +74,7 @@ pub struct Settings {
     pub force_use_location: bool,
     pub accent_color: String,
     pub theme: String,
+    pub disable_school_picture: bool,
 }
 
 impl Default for Settings {
@@ -88,6 +89,7 @@ impl Default for Settings {
             reminders_enabled: true,
             accent_color: "#3b82f6".to_string(), // Default to blue-500
             theme: "system".to_string(), // Default to dark theme
+            disable_school_picture: false,
         }
     }
 }

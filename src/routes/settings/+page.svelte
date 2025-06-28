@@ -34,6 +34,7 @@
   let weatherCity = '';
   let feeds: Feed[] = [];
   let weatherCountry = '';
+  let disableSchoolPicture = false;
 
   let remindersEnabled = true;
   let showCloudSyncModal = false;
@@ -51,6 +52,7 @@
         force_use_location: boolean;
         accent_color: string;
         theme: 'light' | 'dark';
+        disable_school_picture?: boolean;
       }>('get_settings');
       shortcuts = settings.shortcuts || [];
       feeds = settings.feeds || [];
@@ -59,6 +61,7 @@
       weatherCity = settings.weather_city ?? '';
       weatherCountry = settings.weather_country ?? '';
       remindersEnabled = settings.reminders_enabled ?? true;
+      disableSchoolPicture = settings.disable_school_picture ?? false;
       accentColor.set(settings.accent_color ?? '#3b82f6');
       theme.set(settings.theme ?? 'dark');
 
@@ -79,6 +82,7 @@
       weatherCity = '';
       weatherCountry = '';
       remindersEnabled = true;
+      disableSchoolPicture = false;
       accentColor.set('#3b82f6');
       theme.set('dark');
     }
@@ -111,6 +115,7 @@
           force_use_location: forceUseLocation,
           accent_color: $accentColor,
           theme: $theme,
+          disable_school_picture: disableSchoolPicture,
         },
       });
       saveSuccess = true;
@@ -196,6 +201,7 @@
     weatherCity = cloudSettings.weather_city ?? '';
     weatherCountry = cloudSettings.weather_country ?? '';
     remindersEnabled = cloudSettings.reminders_enabled ?? true;
+    disableSchoolPicture = cloudSettings.disable_school_picture ?? false;
     accentColor.set(cloudSettings.accent_color ?? '#3b82f6');
     theme.set(cloudSettings.theme ?? 'dark');
 
@@ -507,6 +513,18 @@
                 Layout settings coming soon...
               </p>
             </div>
+          </div>
+          <!-- Disable School Picture -->
+          <div class="flex gap-4 items-center mt-4">
+            <input
+              id="disable-school-picture"
+              type="checkbox"
+              class="w-4 h-4 accent-blue-600 sm:w-5 sm:h-5"
+              bind:checked={disableSchoolPicture} />
+            <label
+              for="disable-school-picture"
+              class="text-sm font-medium cursor-pointer text-slate-800 sm:text-base dark:text-slate-200"
+              >Disable school picture in user dropdown</label>
           </div>
         </div>
       </section>

@@ -61,8 +61,12 @@ export const authService = {
     return await invoke('logout');
   },
 
-  async loadUserInfo(): Promise<UserInfo | undefined> {
+  async loadUserInfo(options?: { disableSchoolPicture?: boolean }): Promise<UserInfo | undefined> {
     try {
+      if (options?.disableSchoolPicture) {
+        cache.delete('userInfo');
+      }
+      
       const cachedUserInfo = cache.get<UserInfo>('userInfo');
       if (cachedUserInfo) {
         return cachedUserInfo;
@@ -75,11 +79,13 @@ export const authService = {
       });
       const userInfo: UserInfo = JSON.parse(res).payload;
 
-      const profileImage = await seqtaFetch(`/seqta/student/photo/get`, {
-        params: { uuid: userInfo.personUUID, format: 'low' },
-        is_image: true,
-      });
-      userInfo.profilePicture = `data:image/png;base64,${profileImage}`;
+      if (!options?.disableSchoolPicture) {
+        const profileImage = await seqtaFetch(`/seqta/student/photo/get`, {
+          params: { uuid: userInfo.personUUID, format: 'low' },
+          is_image: true,
+        });
+        userInfo.profilePicture = `data:image/png;base64,${profileImage}`;
+      }
 
       cache.set('userInfo', userInfo);
       return userInfo;
