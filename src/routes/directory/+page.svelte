@@ -315,10 +315,12 @@
                 <span class="text-gray-600 dark:text-gray-400">Year {student.year}</span>
               </div>
               
-              <div class="flex items-center gap-2 text-xs">
-                <Icon src={MapPin} class="w-3 h-3 text-gray-400" />
-                <span class="text-gray-600 dark:text-gray-400">{student.sub_school}</span>
-              </div>
+{#if student.sub_school && student.sub_school.trim() !== ""}
+  <div class="flex items-center gap-2 text-xs">
+    <Icon src={MapPin} class="w-3 h-3 text-gray-400" />
+    <span class="text-gray-600 dark:text-gray-400">{student.sub_school}</span>
+  </div>
+{/if}
 
               <div class="flex items-center gap-2 text-xs">
                 <div 
