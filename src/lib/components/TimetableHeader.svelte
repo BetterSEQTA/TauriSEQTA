@@ -9,7 +9,8 @@
     onPrevWeek,
     onNextWeek,
     onExportCsv,
-    onExportPdf
+    onExportPdf,
+    onExportIcal
   } = $props<{
     weekStart: Date;
     loadingLessons: boolean;
@@ -17,6 +18,7 @@
     onNextWeek: () => void;
     onExportCsv: () => void;
     onExportPdf: () => void;
+    onExportIcal: () => void;
   }>();
 
   let showExportMenu = $state(false);
@@ -77,5 +79,6 @@
     bind:showExportMenu
     {onExportCsv}
     {onExportPdf}
+    {onExportIcal}
   />
 </div> 

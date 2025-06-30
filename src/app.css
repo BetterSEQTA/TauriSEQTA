@@ -104,9 +104,13 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 /* prevent overscrolling on safari based browsers */
-html {
-  overflow: hidden;
-  height: 100%;
+html, body, #app, #svelte {
+  background: #18181b !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 body {

@@ -128,23 +128,23 @@
     </div>
   </div>
 
-  <!-- Label filter bar -->
+  <!-- Label filter dropdown -->
   {#if labels.length > 0}
-    <div class="flex flex-wrap gap-2 p-2 mb-6 rounded-lg bg-white/5">
-      <button
-        class="px-4 py-1.5 rounded-lg font-semibold text-sm border border-[var(--surface-alt)] bg-[var(--surface)] hover:bg-[var(--surface-alt)] transition-all duration-200 transform hover:scale-105 active:scale-95 focus:ring-2 focus:ring-blue-400"
-        onclick={() => (selectedLabel = null)}
-        class:selected={!selectedLabel}>
-        All
-      </button>
-      {#each labels as label}
-        <button
-          class="px-4 py-1.5 rounded-lg font-semibold text-sm border border-[var(--surface-alt)] transition-all duration-200 transform hover:scale-105 active:scale-95 focus:ring-2 focus:ring-blue-400"
-          style={`color: ${label.color}; border-color: ${label.color}; background: ${selectedLabel === label.id ? label.color + '22' : 'var(--surface)'}`}
-          onclick={() => (selectedLabel = label.id)}>
-          {label.title}
-        </button>
-      {/each}
+    <div class="flex gap-2 items-center mb-6">
+      <label for="label-select" class="font-semibold text-sm mr-2">Label:</label>
+      <select
+        id="label-select"
+        class="px-4 py-2 rounded-lg border text-slate-900 border-slate-300 dark:bg-slate-800 dark:text-white dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        bind:value={selectedLabel}
+        onchange={(e) => {
+          const target = e.target as HTMLSelectElement;
+          selectedLabel = target.value === '' ? null : +target.value;
+        }}>
+        <option value="">All</option>
+        {#each labels as label}
+          <option value={label.id}>{label.title}</option>
+        {/each}
+      </select>
     </div>
   {/if}
 

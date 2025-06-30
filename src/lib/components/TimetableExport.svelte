@@ -1,10 +1,11 @@
 <script lang="ts">
-  import { Icon, ArrowDownTray, TableCells, DocumentText } from 'svelte-hero-icons';
+  import { Icon, ArrowDownTray, TableCells, DocumentText, CalendarDays } from 'svelte-hero-icons';
   import { fly, scale } from 'svelte/transition';
 
   export let showExportMenu: boolean;
   export let onExportCsv: () => void;
   export let onExportPdf: () => void;
+  export let onExportIcal: () => void;
 </script>
 
 <div class="inline-block relative text-left export-dropdown-container">
@@ -55,6 +56,22 @@
           <div class="flex-1">
             <div class="font-semibold text-slate-900 dark:text-white">Export as PDF</div>
             <div class="text-sm text-slate-500 dark:text-slate-400">Portable document format</div>
+          </div>
+        </button>
+
+        <button
+          class="flex gap-4 items-center px-4 py-4 w-full text-left rounded-xl transition-all duration-200 text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800/50 group"
+          on:click={() => {
+            showExportMenu = false;
+            onExportIcal();
+          }}>
+          <div
+            class="flex justify-center items-center w-10 h-10 rounded-xl transition-all duration-200 bg-blue-100 group-hover:bg-blue-200 dark:bg-blue-900/30 dark:group-hover:bg-blue-900/50">
+            <Icon src={CalendarDays} class="w-5 h-5 text-blue-600 dark:text-blue-400" />
+          </div>
+          <div class="flex-1">
+            <div class="font-semibold text-slate-900 dark:text-white">Export as iCal</div>
+            <div class="text-sm text-slate-500 dark:text-slate-400">Calendar (.ics) format</div>
           </div>
         </button>
       </div>

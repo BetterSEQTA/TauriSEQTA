@@ -678,6 +678,9 @@
           </div>
         </div>
       </section>
+
+      <!-- Add this somewhere in the settings page navigation or main content -->
+      <a href="/settings/theme-store" class="block px-4 py-2 rounded-lg bg-gradient-to-r from-orange-400 to-pink-500 text-white font-semibold shadow hover:scale-105 transition-all duration-200 mt-4 mb-4">Theme Store (Preview Sunset Theme)</a>
     </div>
   {/if}
 </div>

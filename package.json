@@ -35,6 +35,7 @@
     "dayjs": "^1.11.13",
     "dompurify": "^3.2.5",
     "file-saver": "^2.0.5",
+    "ics": "^3.8.1",
     "js-base64": "^3.7.7",
     "jspdf": "^3.0.1",
     "jspdf-autotable": "^5.0.2",

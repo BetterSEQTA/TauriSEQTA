@@ -318,7 +318,7 @@
       <AppSidebar {sidebarOpen} {menu} />
 
       <main
-        class="overflow-y-auto flex-1 rounded-tl-2xl border-t border-l border-slate-200 bg-slate-100/50 dark:border-slate-700/50 dark:bg-slate-900/50">
+        class="overflow-y-auto flex-1 border-t border-l border-slate-200 bg-slate-100/50 dark:border-slate-700/50 dark:bg-slate-900/50">
         {#if $needsSetup}
           <LoginScreen
             {seqtaUrl}

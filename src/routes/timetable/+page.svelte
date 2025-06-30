@@ -9,6 +9,7 @@
   import TimetableHeader from '$lib/components/TimetableHeader.svelte';
   import TimetableGrid from '$lib/components/TimetableGrid.svelte';
   import TimetablePdfViewer from '$lib/components/TimetablePdfViewer.svelte';
+  import { createEvents, EventStatus } from 'ics';
 
   pdfjsLib.GlobalWorkerOptions.workerSrc =
     'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
@@ -242,6 +243,47 @@
     }
   }
 
+  function exportTimetableIcal() {
+    if (!lessons.length) return;
+    const events = lessons.map((l) => {
+      // Parse start and end times
+      const [startHour, startMinute] = l.from.split(':').map(Number);
+      const [endHour, endMinute] = l.until.split(':').map(Number);
+      const date = new Date(l.date);
+      // Always provide 5 elements for start/end
+      const start: [number, number, number, number, number] = [
+        date.getFullYear(),
+        date.getMonth() + 1,
+        date.getDate(),
+        startHour,
+        startMinute
+      ];
+      const end: [number, number, number, number, number] = [
+        date.getFullYear(),
+        date.getMonth() + 1,
+        date.getDate(),
+        endHour,
+        endMinute
+      ];
+      return {
+        title: l.description || l.code || 'Lesson',
+        description: `Room: ${l.room || ''}\nTeacher: ${l.staff || ''}`,
+        start,
+        end,
+        location: l.room || '',
+        productId: 'DesQTA',
+      };
+    });
+    createEvents(events, (error, value) => {
+      if (error) {
+        console.error('iCal export error:', error);
+        return;
+      }
+      const blob = new Blob([value], { type: 'text/calendar;charset=utf-8;' });
+      saveAs(blob, 'timetable.ics');
+    });
+  }
+
   onMount(() => {
     loadLessons();
   });
@@ -255,6 +297,7 @@
     onNextWeek={nextWeek}
     onExportCsv={exportTimetableCSV}
     onExportPdf={exportTimetablePDF}
+    onExportIcal={exportTimetableIcal}
   />
 
   <TimetableGrid
