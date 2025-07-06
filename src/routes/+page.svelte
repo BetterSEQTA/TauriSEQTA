@@ -1,156 +1,121 @@
 <script lang="ts">
-  import { invoke } from "@tauri-apps/api/core";
+  import { onMount, onDestroy } from 'svelte';
+  import { invoke } from '@tauri-apps/api/core';
+  import Modal from '$lib/components/Modal.svelte';
+  import TodaySchedule from '$lib/components/TodaySchedule.svelte';
+  import NoticesPane from '$lib/components/NoticesPane.svelte';
+  import UpcomingAssessments from '$lib/components/UpcomingAssessments.svelte';
+  import WelcomePortal from '$lib/components/WelcomePortal.svelte';
+  import TodoList from '$lib/components/TodoList.svelte';
+  import FocusTimer from '$lib/components/FocusTimer.svelte';
+  import Homework from '$lib/components/Homework.svelte';
 
-  let name = $state("");
-  let greetMsg = $state("");
+  let currentSelectedDate: Date = new Date();
+  let lessons = $state<any[]>([]);
 
-  async function greet(event: Event) {
-    event.preventDefault();
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    greetMsg = await invoke("greet", { name });
+  let lessonInterval: ReturnType<typeof setInterval> | null = null;
+
+  interface Shortcut {
+    name: string;
+    icon: string;
+    url: string;
   }
+
+  let homepageShortcuts = $state<Shortcut[]>([
+    { name: 'Outlook', icon: '📅', url: 'https://outlook.office.com' },
+    { name: 'Office365', icon: '🏢', url: 'https://office365.com' },
+    { name: 'Google', icon: '🌐', url: 'https://google.com' },
+  ]);
+
+  let showPortalModal = $state(false);
+  let portalUrl = $state<string>('');
+
+  function checkCurrentLessons() {
+    const now = new Date();
+    lessons = lessons.map((l: any) => {
+      const [sh, sm] = l.from.split(':').map(Number);
+      const [eh, em] = l.until.split(':').map(Number);
+
+      const start = new Date(currentSelectedDate);
+      start.setHours(sh, sm, 0, 0);
+      const end = new Date(currentSelectedDate);
+      end.setHours(eh, em, 0, 0);
+
+      l.active =
+        now >= start && now <= end && now.toDateString() === currentSelectedDate.toDateString();
+      return l;
+    });
+  }
+
+  async function loadHomepageShortcuts() {
+    try {
+      const settings = await invoke<{ shortcuts: Shortcut[] }>('get_settings');
+      if (settings.shortcuts && settings.shortcuts.length > 0) {
+        homepageShortcuts = settings.shortcuts;
+      }
+    } catch (e) {}
+  }
+
+  function closeModal() {
+    showPortalModal = false;
+  }
+
+  onMount(async () => {
+    await loadHomepageShortcuts();
+  });
+
+  onDestroy(() => {
+    if (lessonInterval) clearInterval(lessonInterval);
+  });
 </script>
 
-<main class="container">
-  <h1>Welcome to Tauri + Svelte</h1>
+<div class="p-8 mx-auto min-h-screen">
+  <div class="space-y-8">
+    <!-- Shortcuts Section -->
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 sm:gap-4">
+      {#each homepageShortcuts as shortcut}
+        <a
+          href={shortcut.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex relative flex-col justify-center items-center p-6 rounded-2xl border shadow-sm transition-all duration-200 cursor-pointer border-slate-200 group bg-white/80 dark:bg-slate-900/60 dark:border-slate-800 hover:accent-bg hover:shadow-lg hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 accent-ring"
+          tabindex="0"
+          aria-label={shortcut.name}>
+          <div
+            class="flex relative justify-center items-center mb-4 w-16 h-16 text-3xl text-white rounded-2xl shadow-lg transition-all duration-200 accent-bg group-hover:scale-110 group-active:scale-95">
+            {shortcut.icon}
+          </div>
+          <span
+            class="relative mt-1 text-base font-semibold text-center transition-colors text-slate-900 dark:text-white"
+            >{shortcut.name}</span>
+        </a>
+      {/each}
+    </div>
 
-  <div class="row">
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo vite" alt="Vite Logo" />
-    </a>
-    <a href="https://tauri.app" target="_blank">
-      <img src="/tauri.svg" class="logo tauri" alt="Tauri Logo" />
-    </a>
-    <a href="https://kit.svelte.dev" target="_blank">
-      <img src="/svelte.svg" class="logo svelte-kit" alt="SvelteKit Logo" />
-    </a>
+    <TodaySchedule />
+    <NoticesPane />
+    <UpcomingAssessments />
+    <WelcomePortal />
+
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div class="space-y-8">
+        <Homework />
+        <TodoList />
+      </div>
+      <FocusTimer />
+    </div>
   </div>
-  <p>Click on the Tauri, Vite, and SvelteKit logos to learn more.</p>
+</div>
 
-  <form class="row" onsubmit={greet}>
-    <input id="greet-input" placeholder="Enter a name..." bind:value={name} />
-    <button type="submit">Greet</button>
-  </form>
-  <p>{greetMsg}</p>
-</main>
-
-<style>
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
-}
-
-.logo.svelte-kit:hover {
-  filter: drop-shadow(0 0 2em #ff3e00);
-}
-
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: #0f0f0f;
-  background-color: #f6f6f6;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-.container {
-  margin: 0;
-  padding-top: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: 0.75s;
-}
-
-.logo.tauri:hover {
-  filter: drop-shadow(0 0 2em #24c8db);
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
-}
-
-h1 {
-  text-align: center;
-}
-
-input,
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  color: #0f0f0f;
-  background-color: #ffffff;
-  transition: border-color 0.25s;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-button {
-  cursor: pointer;
-}
-
-button:hover {
-  border-color: #396cd8;
-}
-button:active {
-  border-color: #396cd8;
-  background-color: #e8e8e8;
-}
-
-input,
-button {
-  outline: none;
-}
-
-#greet-input {
-  margin-right: 5px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #f6f6f6;
-    background-color: #2f2f2f;
-  }
-
-  a:hover {
-    color: #24c8db;
-  }
-
-  input,
-  button {
-    color: #ffffff;
-    background-color: #0f0f0f98;
-  }
-  button:active {
-    background-color: #0f0f0f69;
-  }
-}
-
-</style>
+<Modal
+  bind:open={showPortalModal}
+  onclose={closeModal}
+  maxWidth="w-[80%]"
+  maxHeight="h-[80%]"
+  customClasses="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl"
+  ariaLabel="Welcome Portal Modal">
+  {#if portalUrl}
+    <iframe src={portalUrl} class="w-full h-full rounded-2xl border-0" title="Welcome Portal"
+    ></iframe>
+  {/if}
+</Modal>
