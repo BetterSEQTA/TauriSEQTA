@@ -1,0 +1,50 @@
+{
+  "name": "Bubblegum",
+  "version": "1.0.0",
+  "description": "A playful pastel theme with bubblegum pink, blue, and yellow for a fun, lighthearted UI.",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/bubblegum/preview.png",
+    "screenshots": ["/themes/bubblegum/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#f472b6",
+    "defaultTheme": "light",
+    "supportsLightMode": true,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#f472b6",
+    "secondaryColor": "#60a5fa",
+    "successColor": "#fbbf24",
+    "warningColor": "#f59e42",
+    "errorColor": "#ef4444",
+    "backgroundColor": "#fff7fb",
+    "surfaceColor": "#fce7f3",
+    "textColor": "#4b5563",
+    "borderColor": "#f472b6",
+    "shadowColor": "rgba(244, 114, 182, 0.2)"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "Comic Sans MS, SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": false,
+    "gradients": true,
+    "shadows": true
+  }
+} 

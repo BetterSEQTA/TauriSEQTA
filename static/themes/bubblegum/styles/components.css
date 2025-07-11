@@ -1,0 +1,22 @@
+/* Bubblegum Theme - Component Styles */
+
+/* Card components */
+.bubblegum-card {
+  background: rgba(244, 114, 182, 0.05);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Button components */
+.bubblegum-btn {
+  background: linear-gradient(135deg, #f472b6, #60a5fa);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.bubblegum-btn:hover {
+  background: linear-gradient(135deg, #ec4899, #3b82f6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(244, 114, 182, 0.3);
+} 

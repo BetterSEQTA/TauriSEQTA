@@ -1,0 +1,50 @@
+{
+  "name": "Grape",
+  "version": "1.0.0",
+  "description": "A bold grape theme with purple and violet accents for a vibrant UI.",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/grape/preview.png",
+    "screenshots": ["/themes/grape/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#a21caf",
+    "defaultTheme": "dark",
+    "supportsLightMode": true,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#a21caf",
+    "secondaryColor": "#7c3aed",
+    "successColor": "#22d3ee",
+    "warningColor": "#f59e42",
+    "errorColor": "#ef4444",
+    "backgroundColor": "#1e1b4b",
+    "surfaceColor": "#312e81",
+    "textColor": "#ede9fe",
+    "borderColor": "#7c3aed",
+    "shadowColor": "rgba(124, 58, 237, 0.2)"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": false,
+    "gradients": true,
+    "shadows": true
+  }
+} 

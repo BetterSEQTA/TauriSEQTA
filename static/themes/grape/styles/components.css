@@ -1,0 +1,22 @@
+/* Grape Theme - Component Styles */
+
+/* Card components */
+.grape-card {
+  background: rgba(162, 28, 175, 0.05);
+  border: 1px solid rgba(162, 28, 175, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Button components */
+.grape-btn {
+  background: linear-gradient(135deg, #a21caf, #7c3aed);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.grape-btn:hover {
+  background: linear-gradient(135deg, #7c2d12, #6d28d9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(162, 28, 175, 0.3);
+} 

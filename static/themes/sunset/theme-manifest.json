@@ -1,0 +1,50 @@
+{
+  "name": "Sunset",
+  "version": "1.0.0",
+  "description": "Warm orange-pink sunset gradient theme with cozy vibes",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/sunset/preview.png",
+    "screenshots": ["/themes/sunset/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#ff7e5f",
+    "defaultTheme": "dark",
+    "supportsLightMode": false,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#ff7e5f",
+    "secondaryColor": "#feb47b",
+    "successColor": "#10b981",
+    "warningColor": "#f59e0b",
+    "errorColor": "#ef4444",
+    "backgroundColor": "#1a0f0f",
+    "surfaceColor": "#2d1b1b",
+    "textColor": "#ffffff",
+    "borderColor": "#4a2f2f",
+    "shadowColor": "rgba(255, 126, 95, 0.2)"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": true,
+    "gradients": true,
+    "shadows": true
+  }
+} 

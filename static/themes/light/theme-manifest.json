@@ -1,0 +1,50 @@
+{
+  "name": "Light",
+  "version": "1.0.0",
+  "description": "Clean light mode theme with orange accent for bright environments",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/light/preview.png",
+    "screenshots": ["/themes/light/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#f59e42",
+    "defaultTheme": "light",
+    "supportsLightMode": true,
+    "supportsDarkMode": false,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#f59e42",
+    "secondaryColor": "#64748b",
+    "successColor": "#10b981",
+    "warningColor": "#f59e0b",
+    "errorColor": "#ef4444",
+    "backgroundColor": "#f8fafc",
+    "surfaceColor": "#ffffff",
+    "textColor": "#1e293b",
+    "borderColor": "#e2e8f0",
+    "shadowColor": "rgba(0, 0, 0, 0.1)"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": false,
+    "gradients": true,
+    "shadows": true
+  }
+} 

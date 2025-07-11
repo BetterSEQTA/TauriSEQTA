@@ -1,0 +1,157 @@
+/* Solarized Theme - Global Styles */
+
+:root {
+  --accent-color-value: #b58900;
+  --accent-color-hover: #a57700;
+  --background-color: #002b36;
+}
+
+html, body {
+  background: var(--background-color) !important;
+}
+
+/* Custom scrollbar for solarized theme */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #b58900, #268bd2);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #a57700, #1e6bb8);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #b58900 transparent;
+}
+
+/* Enhanced solarized effects */
+.solarized-earth {
+  background: rgba(181, 137, 0, 0.1) !important;
+  border: 1px solid rgba(181, 137, 0, 0.3);
+}
+
+/* Solarized accent colors for interactive elements */
+.accent-bg {
+  background: linear-gradient(135deg, #b58900, #268bd2) !important;
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #a57700, #1e6bb8) !important;
+}
+
+.accent-text {
+  color: #b58900 !important;
+}
+
+.accent-border {
+  border-color: #b58900 !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #b58900 !important;
+}
+
+/* Solarized shadows */
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(181, 137, 0, 0.3) !important;
+}
+
+/* Enhanced hover effects */
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(181, 137, 0, 0.4) !important;
+}
+
+/* Solarized gradients for cards and containers */
+.solarized-gradient {
+  background: linear-gradient(135deg, rgba(181, 137, 0, 0.1), rgba(38, 139, 210, 0.1));
+  border: 1px solid rgba(181, 137, 0, 0.2);
+}
+
+/* Solarized theme specific button styles */
+.solarized-button {
+  background: linear-gradient(135deg, #b58900, #268bd2);
+  color: #fdf6e3;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.solarized-button:hover {
+  background: linear-gradient(135deg, #a57700, #1e6bb8);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(181, 137, 0, 0.3);
+}
+
+/* Solarized color palette */
+.solarized-yellow {
+  color: #b58900;
+}
+
+.solarized-orange {
+  color: #cb4b16;
+}
+
+.solarized-red {
+  color: #dc322f;
+}
+
+.solarized-magenta {
+  color: #d33682;
+}
+
+.solarized-violet {
+  color: #6c71c4;
+}
+
+.solarized-blue {
+  color: #268bd2;
+}
+
+.solarized-cyan {
+  color: #2aa198;
+}
+
+.solarized-green {
+  color: #859900;
+}
+
+/* Solarized base colors */
+.solarized-base03 {
+  background: #002b36;
+  color: #fdf6e3;
+}
+
+.solarized-base02 {
+  background: #073642;
+  color: #fdf6e3;
+}
+
+.solarized-base01 {
+  background: #586e75;
+  color: #fdf6e3;
+}
+
+.solarized-base00 {
+  background: #657b83;
+  color: #fdf6e3;
+}
+
+.solarized-base0 {
+  background: #839496;
+  color: #002b36;
+}
+
+.solarized-base1 {
+  background: #93a1a1;
+  color: #002b36;
+}
+
+.solarized-base2 {
+  background: #eee8d5;
+  color: #002b36;
+}
+
+.solarized-base3 {
+  background: #fdf6e3;
+  color: #002b36;
+} 

@@ -1,0 +1,216 @@
+/* Aero Theme - Component Styles (Windows 7 Aero Replica) */
+
+/* Card components */
+.aero-card {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(51,153,255,0.12);
+  border-radius: 10px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(51,153,255,0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Aero primary button: glassy, blue gradient, white inner glow, glossy highlight */
+.aero-btn-primary {
+  background: linear-gradient(180deg, #e3f0fb 0%, #3399ff 80%, #1a2a40 100%);
+  color: #fff;
+  border: 2px solid #38bdf8;
+  border-radius: 22px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.6rem 2rem;
+  box-shadow: 0 2px 12px #38bdf8 inset, 0 2px 8px #fff8 inset, 0 4px 16px #38bdf844;
+  position: relative;
+  transition: background 0.2s, box-shadow 0.2s, border 0.2s, transform 0.2s;
+}
+.aero-btn-primary::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #fff8 40%, transparent 100%);
+  opacity: 0.7;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  pointer-events: none;
+}
+.aero-btn-primary:hover, .aero-btn-primary:focus {
+  background: linear-gradient(180deg, #b3d8f7 0%, #1976d2 100%);
+  border-color: #1976d2;
+  box-shadow: 0 0 12px 2px #38bdf8, 0 2px 12px #b3d8f7 inset;
+  color: #fff;
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Aero secondary button: glassy, blue/gray gradient, white inner glow */
+.aero-btn-secondary {
+  background: linear-gradient(180deg, #f5fafd 0%, #e3f0fb 100%, #1a2a40 100%);
+  color: #1976d2;
+  border: 2px solid #b3d8f7;
+  border-radius: 22px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.6rem 2rem;
+  box-shadow: 0 1px 8px #b3d8f7 inset, 0 2px 8px #fff8 inset;
+  position: relative;
+  transition: background 0.2s, box-shadow 0.2s, border 0.2s, transform 0.2s;
+}
+.aero-btn-secondary::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #fff8 40%, transparent 100%);
+  opacity: 0.7;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  pointer-events: none;
+}
+.aero-btn-secondary:hover, .aero-btn-secondary:focus {
+  background: linear-gradient(180deg, #e3f0fb 0%, #b3d8f7 100%);
+  border-color: #3399ff;
+  color: #3399ff;
+  box-shadow: 0 0 8px 2px #b3d8f7, 0 1px 8px #b3d8f7 inset;
+  outline: none;
+  transform: scale(1.04);
+}
+
+/* Aero glass button: blue/cyan tint, white highlight */
+.aero-btn-glass {
+  background: linear-gradient(135deg, rgba(56,189,248,0.18) 0%, rgba(24,38,56,0.92) 100%);
+  color: #38bdf8;
+  border: 2px solid #38bdf8;
+  border-radius: 18px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 1px 8px #38bdf8 inset, 0 2px 8px #fff8 inset;
+  position: relative;
+  transition: background 0.2s, box-shadow 0.2s, border 0.2s, transform 0.2s;
+}
+.aero-btn-glass::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #fff8 40%, transparent 100%);
+  opacity: 0.7;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  pointer-events: none;
+}
+.aero-btn-glass:hover, .aero-btn-glass:focus {
+  background: linear-gradient(135deg, #38bdf8 0%, #1a2a40 100%);
+  border-color: #38bdf8;
+  color: #fff;
+  box-shadow: 0 0 8px 2px #38bdf8, 0 1px 8px #b3d8f7 inset;
+  outline: none;
+  transform: scale(1.04);
+}
+
+/* Aero panel: glassy, blue/cyan border, stronger shadow, more rounded */
+.aero-panel {
+  background: linear-gradient(135deg, rgba(56,189,248,0.10) 0%, rgba(24,38,56,0.92) 100%);
+  border: 2px solid #38bdf8;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 8px rgba(56,189,248,0.18);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #eaf6ff;
+  padding: 1.5rem;
+}
+
+/* Aero Start button: round, green, glassy */
+.aero-btn-start {
+  background: linear-gradient(180deg, #7fffd4 0%, #38bdf8 100%);
+  color: #003c2e;
+  border: 2.5px solid #7fffd4;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 12px #38bdf8 inset, 0 2px 8px #fff8 inset, 0 4px 16px #38bdf844;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s, box-shadow 0.2s, border 0.2s, transform 0.2s;
+}
+.aero-btn-start::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(90deg, #fff8 40%, transparent 100%);
+  opacity: 0.7;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  pointer-events: none;
+}
+.aero-btn-start:hover, .aero-btn-start:focus {
+  background: linear-gradient(180deg, #38bdf8 0%, #7fffd4 100%);
+  border-color: #38bdf8;
+  color: #003c2e;
+  box-shadow: 0 0 12px 2px #7fffd4, 0 2px 12px #38bdf8 inset;
+  outline: none;
+  transform: scale(1.08);
+}
+
+/* Modal/dialog */
+.aero-modal {
+  background: var(--window-glass);
+  border: 1.5px solid var(--window-border);
+  border-radius: var(--window-radius);
+  box-shadow: var(--window-shadow);
+  backdrop-filter: blur(18px);
+  padding: 2rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Close button (for modals/dialogs) */
+.aero-close-btn {
+  background: linear-gradient(180deg, #fff 0%, #e3f0fb 100%);
+  color: #1976d2;
+  border: 1.5px solid #b3d8f7;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 1px 4px #b3d8f7 inset;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, border 0.2s, transform 0.2s;
+}
+.aero-close-btn:hover, .aero-close-btn:focus {
+  background: linear-gradient(180deg, #b3d8f7 0%, #fff 100%);
+  border-color: #3399ff;
+  color: #3399ff;
+  box-shadow: 0 0 8px 2px #b3d8f7, 0 1px 4px #b3d8f7 inset;
+  outline: none;
+  transform: scale(1.08);
+}
+
+/* Toolbar and titlebar (for use in navs, modals, etc.) */
+.aero-toolbar, .aero-titlebar {
+  font-family: 'Segoe UI', Arial, sans-serif;
+} 

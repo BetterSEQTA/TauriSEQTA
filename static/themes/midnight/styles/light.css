@@ -1,0 +1,13 @@
+/* Midnight Theme - Light Mode Styles */
+
+:not(.dark) {
+  --background-color: #f8fafc;
+  --surface-color: rgba(255, 255, 255, 0.95);
+  --text-color: #1e293b;
+  --border-color: #2563eb;
+}
+
+:not(.dark) .midnight-focus {
+  background: rgba(37, 99, 235, 0.1) !important;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+} 

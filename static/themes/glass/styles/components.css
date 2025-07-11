@@ -1,0 +1,23 @@
+/* Glass Theme - Component Styles */
+
+/* Card components */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+/* Button components */
+.glass-btn {
+  background: linear-gradient(135deg, #38bdf8, #a5f3fc);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.glass-btn:hover {
+  background: linear-gradient(135deg, #0ea5e9, #67e8f9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+} 

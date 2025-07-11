@@ -1,0 +1,81 @@
+/* Aero Theme - Dark Mode Styles (Windows 7 Aurora Blue) */
+
+.dark {
+  --background-color: radial-gradient(ellipse at 60% 30%, #3b6ea8 0%, #1a2a40 60%, #0b1623 100%);
+  --surface-color: rgba(24, 38, 56, 0.85);
+  --text-color: #eaf6ff;
+  --border-color: #38bdf8;
+  --accent-green: #7fffd4;
+}
+
+.dark .aero-morphism, .dark .aero-window, .dark .aero-card, .dark .aero-panel {
+  background: linear-gradient(135deg, rgba(56,189,248,0.10) 0%, rgba(24,38,56,0.92) 100%) !important;
+  border: 1.5px solid #38bdf8;
+  box-shadow: 0 8px 32px rgba(56,189,248,0.18), 0 1.5px 0 0 #fff1 inset;
+}
+
+/* 7.css dark mode overrides */
+.dark .window,
+.dark .title-bar,
+.dark .status-bar,
+.dark .menu,
+.dark .button,
+.dark .input,
+.dark .checkbox,
+.dark .radio,
+.dark .progress-bar,
+.dark .tab,
+.dark .list-view,
+.dark .tree-view {
+  background: #23272e !important;
+  color: #eaf6ff !important;
+  border-color: #3399ff !important;
+  box-shadow: none !important;
+}
+
+.dark .button,
+.dark button,
+.dark input[type="button"],
+.dark input[type="submit"] {
+  background: linear-gradient(180deg, #23272e 0%, #3399ff 100%) !important;
+  color: #eaf6ff !important;
+  border: 1.5px solid #3399ff !important;
+}
+
+.dark .title-bar {
+  background: linear-gradient(90deg, #23272e 0%, #3399ff 100%) !important;
+  color: #eaf6ff !important;
+}
+
+.dark .input,
+.dark input,
+.dark textarea,
+.dark select {
+  background: #23272e !important;
+  color: #eaf6ff !important;
+  border: 1.5px solid #3399ff !important;
+}
+
+.dark .checkbox,
+.dark .radio {
+  background: #23272e !important;
+  border: 1.5px solid #3399ff !important;
+}
+
+.dark .progress-bar {
+  background: #23272e !important;
+  border: 1.5px solid #3399ff !important;
+}
+
+.dark .tab {
+  background: #23272e !important;
+  color: #eaf6ff !important;
+  border: 1.5px solid #3399ff !important;
+}
+
+.dark .list-view,
+.dark .tree-view {
+  background: #23272e !important;
+  color: #eaf6ff !important;
+  border: 1.5px solid #3399ff !important;
+} 

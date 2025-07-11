@@ -1,0 +1,21 @@
+/* Solarized Theme - Component Styles */
+
+/* Card components */
+.solarized-card {
+  background: rgba(181, 137, 0, 0.05);
+  border: 1px solid rgba(181, 137, 0, 0.2);
+}
+
+/* Button components */
+.solarized-btn {
+  background: linear-gradient(135deg, #b58900, #268bd2);
+  color: #fdf6e3;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.solarized-btn:hover {
+  background: linear-gradient(135deg, #a57700, #1e6bb8);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(181, 137, 0, 0.3);
+} 

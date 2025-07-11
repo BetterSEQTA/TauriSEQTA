@@ -1,0 +1,13 @@
+/* Solarized Theme - Dark Mode Styles */
+
+.dark {
+  --background-color: #002b36;
+  --surface-color: rgba(7, 54, 66, 0.9);
+  --text-color: #fdf6e3;
+  --border-color: #b58900;
+}
+
+.dark .solarized-earth {
+  background: rgba(181, 137, 0, 0.15) !important;
+  border: 1px solid rgba(181, 137, 0, 0.3);
+} 

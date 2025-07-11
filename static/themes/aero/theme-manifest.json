@@ -1,0 +1,50 @@
+{
+  "name": "Aero",
+  "version": "1.0.0",
+  "description": "A Windows 7 Aero-inspired theme with glassy blue gradients, subtle shadows, and frosted backgrounds.",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/aero/preview.png",
+    "screenshots": ["/themes/aero/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#3399ff",
+    "defaultTheme": "light",
+    "supportsLightMode": true,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#3399ff",
+    "secondaryColor": "#e3f0fb",
+    "successColor": "#4ecdc4",
+    "warningColor": "#ffe066",
+    "errorColor": "#ff6b6b",
+    "backgroundColor": "rgba(221,235,247,0.85)",
+    "surfaceColor": "rgba(255,255,255,0.7)",
+    "textColor": "#1b2838",
+    "borderColor": "#3399ff",
+    "shadowColor": "rgba(51,153,255,0.2)"
+  },
+  "fonts": {
+    "primary": "Segoe UI",
+    "secondary": "Arial",
+    "monospace": "Consolas"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": true,
+    "gradients": true,
+    "shadows": true
+  }
+} 

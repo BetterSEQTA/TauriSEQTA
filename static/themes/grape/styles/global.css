@@ -1,0 +1,98 @@
+/* Grape Theme - Global Styles */
+
+:root {
+  --accent-color-value: #a21caf;
+  --accent-color-hover: #7c2d12;
+  --background-color: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
+}
+
+html, body {
+  background: var(--background-color) !important;
+}
+
+/* Custom scrollbar for grape theme */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a21caf, #7c3aed);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #7c2d12, #6d28d9);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #a21caf transparent;
+}
+
+/* Enhanced grape effects */
+.grape-vibrant {
+  background: rgba(162, 28, 175, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(162, 28, 175, 0.2);
+}
+
+/* Grape accent colors for interactive elements */
+.accent-bg {
+  background: linear-gradient(135deg, #a21caf, #7c3aed) !important;
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #7c2d12, #6d28d9) !important;
+}
+
+.accent-text {
+  color: #a21caf !important;
+}
+
+.accent-border {
+  border-color: #a21caf !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #a21caf !important;
+}
+
+/* Grape shadows */
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(162, 28, 175, 0.3) !important;
+}
+
+/* Enhanced hover effects */
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(162, 28, 175, 0.4) !important;
+}
+
+/* Grape gradients for cards and containers */
+.grape-gradient {
+  background: linear-gradient(135deg, rgba(162, 28, 175, 0.1), rgba(124, 58, 237, 0.1));
+  border: 1px solid rgba(162, 28, 175, 0.2);
+}
+
+/* Grape theme specific button styles */
+.grape-button {
+  background: linear-gradient(135deg, #a21caf, #7c3aed);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.grape-button:hover {
+  background: linear-gradient(135deg, #7c2d12, #6d28d9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(162, 28, 175, 0.3);
+}
+
+/* Grape vibrant animations */
+.grape-glow {
+  animation: grape-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes grape-glow {
+  from {
+    box-shadow: 0 0 5px rgba(162, 28, 175, 0.2);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(162, 28, 175, 0.4);
+  }
+} 

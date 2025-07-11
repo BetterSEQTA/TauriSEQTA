@@ -1,0 +1,98 @@
+/* Mint Theme - Global Styles */
+
+:root {
+  --accent-color-value: #10b981;
+  --accent-color-hover: #059669;
+  --background-color: linear-gradient(135deg, #0f172a 0%, #134e4a 50%, #0f172a 100%);
+}
+
+html, body {
+  background: var(--background-color) !important;
+}
+
+/* Custom scrollbar for mint theme */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #059669, #0891b2);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #10b981 transparent;
+}
+
+/* Enhanced mint effects */
+.mint-fresh {
+  background: rgba(16, 185, 129, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Mint accent colors for interactive elements */
+.accent-bg {
+  background: linear-gradient(135deg, #10b981, #06b6d4) !important;
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #059669, #0891b2) !important;
+}
+
+.accent-text {
+  color: #10b981 !important;
+}
+
+.accent-border {
+  border-color: #10b981 !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #10b981 !important;
+}
+
+/* Mint shadows */
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Enhanced hover effects */
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* Mint gradients for cards and containers */
+.mint-gradient {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1));
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Mint theme specific button styles */
+.mint-button {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.mint-button:hover {
+  background: linear-gradient(135deg, #059669, #0891b2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Mint calming animations */
+.mint-pulse {
+  animation: mint-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes mint-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+} 

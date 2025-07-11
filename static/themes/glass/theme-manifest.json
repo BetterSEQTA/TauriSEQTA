@@ -1,0 +1,50 @@
+{
+  "name": "Glass",
+  "version": "1.0.0",
+  "description": "A modern glassmorphism theme with blurred, semi-transparent backgrounds and frosted accents.",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/glass/preview.png",
+    "screenshots": ["/themes/glass/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#38bdf8",
+    "defaultTheme": "dark",
+    "supportsLightMode": true,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#38bdf8",
+    "secondaryColor": "#a5f3fc",
+    "successColor": "#22d3ee",
+    "warningColor": "#f59e42",
+    "errorColor": "#ef4444",
+    "backgroundColor": "rgba(30,41,59,0.7)",
+    "surfaceColor": "rgba(255,255,255,0.1)",
+    "textColor": "#e0f2fe",
+    "borderColor": "#38bdf8",
+    "shadowColor": "rgba(56, 189, 248, 0.2)"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": true,
+    "gradients": false,
+    "shadows": true
+  }
+} 

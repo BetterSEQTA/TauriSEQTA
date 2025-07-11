@@ -1,0 +1,50 @@
+{
+  "name": "Default",
+  "version": "1.0.0",
+  "description": "The default DesQTA theme with modern blue accent and clean design",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/default/preview.png",
+    "screenshots": ["/themes/default/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#3b82f6",
+    "defaultTheme": "dark",
+    "supportsLightMode": true,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#3b82f6",
+    "secondaryColor": "#64748b",
+    "successColor": "#10b981",
+    "warningColor": "#f59e0b",
+    "errorColor": "#ef4444",
+    "backgroundColor": "#18181b",
+    "surfaceColor": "#232428",
+    "textColor": "#ffffff",
+    "borderColor": "#334155",
+    "shadowColor": "rgba(0, 0, 0, 0.1)"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": false,
+    "gradients": true,
+    "shadows": true
+  }
+} 

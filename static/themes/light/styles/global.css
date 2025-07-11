@@ -1,0 +1,136 @@
+/* Light Theme - Global Styles */
+
+:root {
+  --accent-color-value: #f59e42;
+  --accent-color-hover: #d97706;
+  --background-color: #f8fafc;
+}
+
+html, body {
+  background: var(--background-color) !important;
+}
+
+/* Custom scrollbar for light theme */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f59e42, #64748b);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #d97706, #475569);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #f59e42 transparent;
+}
+
+/* Enhanced light effects */
+.light-clean {
+  background: rgba(245, 158, 66, 0.1) !important;
+  border: 1px solid rgba(245, 158, 66, 0.2);
+}
+
+/* Light accent colors for interactive elements */
+.accent-bg {
+  background: linear-gradient(135deg, #f59e42, #64748b) !important;
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #d97706, #475569) !important;
+}
+
+.accent-text {
+  color: #f59e42 !important;
+}
+
+.accent-border {
+  border-color: #f59e42 !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #f59e42 !important;
+}
+
+/* Light shadows */
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(245, 158, 66, 0.3) !important;
+}
+
+/* Enhanced hover effects */
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(245, 158, 66, 0.4) !important;
+}
+
+/* Light gradients for cards and containers */
+.light-gradient {
+  background: linear-gradient(135deg, rgba(245, 158, 66, 0.1), rgba(100, 116, 139, 0.1));
+  border: 1px solid rgba(245, 158, 66, 0.2);
+}
+
+/* Light theme specific button styles */
+.light-button {
+  background: linear-gradient(135deg, #f59e42, #64748b);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.light-button:hover {
+  background: linear-gradient(135deg, #d97706, #475569);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 66, 0.3);
+}
+
+/* Light theme clean animations */
+.light-fade {
+  animation: light-fade 2s ease-in-out infinite;
+}
+
+@keyframes light-fade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Light theme text colors */
+.text-slate-900 {
+  color: #1e293b !important;
+}
+
+.text-slate-700 {
+  color: #334155 !important;
+}
+
+.text-slate-600 {
+  color: #475569 !important;
+}
+
+/* Light theme background colors */
+.bg-slate-100 {
+  background: #f1f5f9 !important;
+}
+
+.bg-slate-200 {
+  background: #e2e8f0 !important;
+}
+
+.bg-slate-800 {
+  background: #1e293b !important;
+}
+
+.bg-slate-900 {
+  background: #0f172a !important;
+}
+
+/* Light theme border colors */
+.border-slate-200 {
+  border-color: #e2e8f0 !important;
+}
+
+.border-slate-300 {
+  border-color: #cbd5e1 !important;
+} 

@@ -1,0 +1,50 @@
+{
+  "name": "Solarized",
+  "version": "1.0.0",
+  "description": "A Solarized theme inspired by code editors, with earthy blue, green, and yellow tones.",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/solarized/preview.png",
+    "screenshots": ["/themes/solarized/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#b58900",
+    "defaultTheme": "dark",
+    "supportsLightMode": true,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#b58900",
+    "secondaryColor": "#268bd2",
+    "successColor": "#859900",
+    "warningColor": "#cb4b16",
+    "errorColor": "#dc322f",
+    "backgroundColor": "#002b36",
+    "surfaceColor": "#073642",
+    "textColor": "#fdf6e3",
+    "borderColor": "#586e75",
+    "shadowColor": "rgba(38, 139, 210, 0.2)"
+  },
+  "fonts": {
+    "primary": "Fira Mono, Inter",
+    "secondary": "SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": false,
+    "gradients": false,
+    "shadows": true
+  }
+} 

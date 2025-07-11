@@ -1,0 +1,84 @@
+/* Sunset Theme - Global Styles */
+
+:root {
+  --accent-color-value: #ff7e5f;
+  --accent-color-hover: #e65a3f;
+  --background-color: linear-gradient(135deg, #1a0f0f 0%, #2d1b1b 50%, #1a0f0f 100%);
+}
+
+html, body {
+  background: var(--background-color) !important;
+}
+
+/* Custom scrollbar for sunset theme */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #e65a3f, #f59e42);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #ff7e5f transparent;
+}
+
+/* Enhanced glassmorphism effects */
+.glassmorphism {
+  background: rgba(255, 126, 95, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 126, 95, 0.2);
+}
+
+/* Sunset accent colors for interactive elements */
+.accent-bg {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b) !important;
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #e65a3f, #f59e42) !important;
+}
+
+.accent-text {
+  color: #ff7e5f !important;
+}
+
+.accent-border {
+  border-color: #ff7e5f !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #ff7e5f !important;
+}
+
+/* Sunset shadows */
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(255, 126, 95, 0.3) !important;
+}
+
+/* Enhanced hover effects */
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(255, 126, 95, 0.4) !important;
+}
+
+/* Sunset gradients for cards and containers */
+.sunset-gradient {
+  background: linear-gradient(135deg, rgba(255, 126, 95, 0.1), rgba(254, 180, 123, 0.1));
+  border: 1px solid rgba(255, 126, 95, 0.2);
+}
+
+/* Sunset theme specific button styles */
+.sunset-button {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.sunset-button:hover {
+  background: linear-gradient(135deg, #e65a3f, #f59e42);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 126, 95, 0.3);
+} 

@@ -1,0 +1,13 @@
+/* Aero Theme - Light Mode Styles */
+
+:not(.dark) {
+  --background-color: rgba(221,235,247,0.85);
+  --surface-color: rgba(255,255,255,0.7);
+  --text-color: #1b2838;
+  --border-color: #3399ff;
+}
+
+:not(.dark) .aero-morphism {
+  background: rgba(255,255,255,0.3) !important;
+  border: 1px solid rgba(51,153,255,0.15);
+} 

@@ -1,0 +1,50 @@
+{
+  "name": "Mint",
+  "version": "1.0.0",
+  "description": "A fresh minty theme with green and teal accents for a calming UI.",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/mint/preview.png",
+    "screenshots": ["/themes/mint/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#10b981",
+    "defaultTheme": "dark",
+    "supportsLightMode": true,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#10b981",
+    "secondaryColor": "#06b6d4",
+    "successColor": "#22d3ee",
+    "warningColor": "#f59e42",
+    "errorColor": "#ef4444",
+    "backgroundColor": "#0f172a",
+    "surfaceColor": "#134e4a",
+    "textColor": "#e0f2f1",
+    "borderColor": "#0e7490",
+    "shadowColor": "rgba(16, 185, 129, 0.2)"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": false,
+    "gradients": true,
+    "shadows": true
+  }
+} 

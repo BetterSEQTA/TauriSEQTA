@@ -1,0 +1,13 @@
+/* Light Theme - Dark Mode Styles */
+
+.dark {
+  --background-color: #1e293b;
+  --surface-color: rgba(30, 41, 59, 0.9);
+  --text-color: #f1f5f9;
+  --border-color: #f59e42;
+}
+
+.dark .light-clean {
+  background: rgba(245, 158, 66, 0.15) !important;
+  border: 1px solid rgba(245, 158, 66, 0.3);
+} 

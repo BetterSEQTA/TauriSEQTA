@@ -1,0 +1,50 @@
+{
+  "name": "Midnight",
+  "version": "1.0.0",
+  "description": "A high-contrast midnight theme for accessibility and focus, with blue accents.",
+  "author": "DesQTA Team",
+  "license": "MIT",
+  "compatibility": {
+    "minVersion": "1.0.0",
+    "maxVersion": "2.0.0"
+  },
+  "preview": {
+    "thumbnail": "/themes/midnight/preview.png",
+    "screenshots": ["/themes/midnight/screenshot1.png"]
+  },
+  "settings": {
+    "defaultAccentColor": "#2563eb",
+    "defaultTheme": "dark",
+    "supportsLightMode": false,
+    "supportsDarkMode": true,
+    "supportsSystemMode": true
+  },
+  "customProperties": {
+    "primaryColor": "#2563eb",
+    "secondaryColor": "#1e293b",
+    "successColor": "#22d3ee",
+    "warningColor": "#f59e42",
+    "errorColor": "#ef4444",
+    "backgroundColor": "#000000",
+    "surfaceColor": "#1e293b",
+    "textColor": "#ffffff",
+    "borderColor": "#2563eb",
+    "shadowColor": "rgba(37, 99, 235, 0.2)"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "SF Pro Display",
+    "monospace": "JetBrains Mono"
+  },
+  "animations": {
+    "duration": "200ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "enableEnhanced": true
+  },
+  "features": {
+    "customScrollbars": true,
+    "glassmorphism": false,
+    "gradients": false,
+    "shadows": true
+  }
+} 

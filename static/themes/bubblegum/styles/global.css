@@ -1,0 +1,117 @@
+/* Bubblegum Theme - Global Styles */
+
+:root {
+  --accent-color-value: #f472b6;
+  --accent-color-hover: #ec4899;
+  --background-color: linear-gradient(135deg, #fff7fb 0%, #fce7f3 50%, #fff7fb 100%);
+}
+
+html, body {
+  background: var(--background-color) !important;
+}
+
+/* Custom scrollbar for bubblegum theme */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f472b6, #60a5fa);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ec4899, #3b82f6);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #f472b6 transparent;
+}
+
+/* Enhanced bubblegum effects */
+.bubblegum-playful {
+  background: rgba(244, 114, 182, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+}
+
+/* Bubblegum accent colors for interactive elements */
+.accent-bg {
+  background: linear-gradient(135deg, #f472b6, #60a5fa) !important;
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #ec4899, #3b82f6) !important;
+}
+
+.accent-text {
+  color: #f472b6 !important;
+}
+
+.accent-border {
+  border-color: #f472b6 !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #f472b6 !important;
+}
+
+/* Bubblegum shadows */
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(244, 114, 182, 0.3) !important;
+}
+
+/* Enhanced hover effects */
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.4) !important;
+}
+
+/* Bubblegum gradients for cards and containers */
+.bubblegum-gradient {
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.1), rgba(96, 165, 250, 0.1));
+  border: 1px solid rgba(244, 114, 182, 0.2);
+}
+
+/* Bubblegum theme specific button styles */
+.bubblegum-button {
+  background: linear-gradient(135deg, #f472b6, #60a5fa);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.bubblegum-button:hover {
+  background: linear-gradient(135deg, #ec4899, #3b82f6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(244, 114, 182, 0.3);
+}
+
+/* Bubblegum playful animations */
+.bubblegum-bounce {
+  animation: bubblegum-bounce 2s ease-in-out infinite;
+}
+
+@keyframes bubblegum-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Pastel color variations */
+.bubblegum-pink {
+  background: rgba(244, 114, 182, 0.1);
+  border-color: #f472b6;
+}
+
+.bubblegum-blue {
+  background: rgba(96, 165, 250, 0.1);
+  border-color: #60a5fa;
+}
+
+.bubblegum-yellow {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: #fbbf24;
+} 

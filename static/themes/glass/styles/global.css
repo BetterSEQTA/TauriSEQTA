@@ -1,0 +1,149 @@
+/* Glass Theme - Global Styles */
+
+:root {
+  --accent-color-value: #38bdf8;
+  --accent-color-hover: #0ea5e9;
+  --background-color: rgba(30, 41, 59, 0.7);
+}
+
+html, body {
+  background: var(--background-color) !important;
+}
+
+/* Custom scrollbar for glass theme */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #38bdf8, #a5f3fc);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0ea5e9, #67e8f9);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #38bdf8 transparent;
+}
+
+/* Enhanced glassmorphism effects */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass accent colors for interactive elements */
+.accent-bg {
+  background: linear-gradient(135deg, #38bdf8, #a5f3fc) !important;
+  backdrop-filter: blur(10px);
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #0ea5e9, #67e8f9) !important;
+}
+
+.accent-text {
+  color: #38bdf8 !important;
+}
+
+.accent-border {
+  border-color: #38bdf8 !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #38bdf8 !important;
+}
+
+/* Glass shadows */
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3) !important;
+}
+
+/* Enhanced hover effects */
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4) !important;
+}
+
+/* Glass gradients for cards and containers */
+.glass-gradient {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(165, 243, 252, 0.1));
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+/* Glass theme specific button styles */
+.glass-button {
+  background: linear-gradient(135deg, #38bdf8, #a5f3fc);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.glass-button:hover {
+  background: linear-gradient(135deg, #0ea5e9, #67e8f9);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+/* Glassmorphism variations */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-panel {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glass animations */
+.glass-shimmer {
+  animation: glass-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes glass-shimmer {
+  0% {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Frosted glass effects */
+.frosted-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass input fields */
+.glass-input {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #e0f2fe;
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+} 

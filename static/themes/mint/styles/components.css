@@ -1,0 +1,22 @@
+/* Mint Theme - Component Styles */
+
+/* Card components */
+.mint-card {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* Button components */
+.mint-btn {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.mint-btn:hover {
+  background: linear-gradient(135deg, #059669, #0891b2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+} 

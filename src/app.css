@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply antialiased;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar {
+    background: transparent;
+  }
+}
+::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* blue-500, accent color */
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* blue-500 */
+  }
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb; /* blue-600, darker accent */
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* blue-600 */
+  }
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    scrollbar-color: #3b82f6 transparent;
+  }
+}
+
+/* Make calendar icon in date inputs appropriate for theme */
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+}
+
+/* Dynamic accent color classes */
+.accent-bg {
+  background-color: var(--accent-color);
+}
+
+.accent-bg-hover:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
+
+.accent-border {
+  border-color: var(--accent-color);
+}
+
+.accent-ring {
+  --tw-ring-color: var(--accent-color);
+}
+
+.accent-shadow {
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Update accent color variables when the store changes */
+:root[data-accent-color] {
+  --accent-color: var(--accent-color-value);
+  --accent-color-hover: color-mix(in srgb, var(--accent-color-value) 90%, black);
+  --accent-color-light: color-mix(in srgb, var(--accent-color-value) 20%, white);
+  --accent-color-dark: color-mix(in srgb, var(--accent-color-value) 90%, black);
+}
+
+/* prevent overscrolling on safari based browsers */
+html, body, #app, #svelte {
+  background: #18181b !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+/* Enhanced Animations */
+.enhanced-animations .playful {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.enhanced-animations .playful:hover {
+  transform: scale(1.05);
+}
+
+.enhanced-animations .playful:active {
+  transform: scale(0.95);
+}
+
+/* Override classes for specific elements that need different animations */
+.enhanced-animations .playful-subtle:hover {
+  transform: scale(1.02);
+}
+
+.enhanced-animations .playful-subtle:active {
+  transform: scale(0.98);
+}
+
+.enhanced-animations .playful-extra:hover {
+  transform: scale(1.1);
+}
+
+.enhanced-animations .playful-extra:active {
+  transform: scale(0.9);
+}

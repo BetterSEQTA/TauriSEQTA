@@ -1,0 +1,13 @@
+/* Glass Theme - Light Mode Styles */
+
+:not(.dark) {
+  --background-color: rgba(248, 250, 252, 0.7);
+  --surface-color: rgba(255, 255, 255, 0.9);
+  --text-color: #1e293b;
+  --border-color: #38bdf8;
+}
+
+:not(.dark) .glassmorphism {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+} 

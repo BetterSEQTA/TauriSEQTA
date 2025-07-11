@@ -1,0 +1,21 @@
+/* Light Theme - Component Styles */
+
+/* Card components */
+.light-card {
+  background: rgba(245, 158, 66, 0.05);
+  border: 1px solid rgba(245, 158, 66, 0.2);
+}
+
+/* Button components */
+.light-btn {
+  background: linear-gradient(135deg, #f59e42, #64748b);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.light-btn:hover {
+  background: linear-gradient(135deg, #d97706, #475569);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 158, 66, 0.3);
+} 

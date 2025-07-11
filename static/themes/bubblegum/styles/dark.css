@@ -1,0 +1,13 @@
+/* Bubblegum Theme - Dark Mode Styles */
+
+.dark {
+  --background-color: linear-gradient(135deg, #1f1f23 0%, #2d1b1b 50%, #1f1f23 100%);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --text-color: #fce7f3;
+  --border-color: #f472b6;
+}
+
+.dark .bubblegum-playful {
+  background: rgba(244, 114, 182, 0.15) !important;
+  border: 1px solid rgba(244, 114, 182, 0.3);
+} 

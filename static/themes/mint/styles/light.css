@@ -1,0 +1,13 @@
+/* Mint Theme - Light Mode Styles */
+
+:not(.dark) {
+  --background-color: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0fdf4 100%);
+  --surface-color: rgba(255, 255, 255, 0.9);
+  --text-color: #064e3b;
+  --border-color: #10b981;
+}
+
+:not(.dark) .mint-fresh {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+} 

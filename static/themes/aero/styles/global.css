@@ -1,0 +1,291 @@
+/* Aero Theme - Global Styles (Windows 7 Aero Replica) */
+
+/* Import 7.css for Windows 7-style interface elements */
+@import url('https://unpkg.com/7.css');
+
+:root {
+  --accent-color-value: #3399ff;
+  --accent-color-hover: #1976d2;
+  --background-color: rgba(221,235,247,0.92);
+  --window-glass: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(51,153,255,0.18) 100%);
+  --window-border: #b3d8f7;
+  --window-shadow: 0 8px 32px rgba(51,153,255,0.18), 0 1.5px 0 0 #fff inset;
+  --window-radius: 14px;
+  --toolbar-bg: linear-gradient(90deg, #e3f0fb 0%, #c6e2fa 100%);
+  --titlebar-bg: linear-gradient(90deg, #e3f0fb 0%, #b3d8f7 100%);
+  --titlebar-border: #a4c2e0;
+  --shadow-color: rgba(51,153,255,0.18);
+  --font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html, body {
+  background: var(--background-color) !important;
+  font-family: var(--font-family);
+}
+
+/* Aero window with glassy border, glow, and highlight */
+.aero-window {
+  background: var(--window-glass);
+  border: 3px solid rgba(56,189,248,0.35);
+  border-radius: 18px;
+  box-shadow: 0 12px 48px 8px rgba(56,189,248,0.25), 0 2px 0 0 #fff8 inset;
+  overflow: hidden;
+  position: relative;
+}
+
+/* White highlight line at top */
+.aero-highlight-line {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #fff 60%, transparent 100%);
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  pointer-events: none;
+}
+
+/* Aero titlebar with strong blue gradient and glossy highlight */
+.aero-titlebar {
+  background: linear-gradient(180deg, #5ac8fa 0%, #3399ff 60%, #1a2a40 100%);
+  border-bottom: 2px solid #b3d8f7;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 1.1rem 2rem 0.8rem 2rem;
+  position: relative;
+  box-shadow: 0 2px 8px #38bdf8 inset;
+}
+.aero-titlebar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #fff8 40%, transparent 100%);
+  opacity: 0.7;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  pointer-events: none;
+}
+
+/* Aero sidebar (frosted glass, blue glow) */
+.aero-sidebar {
+  background: linear-gradient(135deg, rgba(24,38,56,0.92) 60%, rgba(56,189,248,0.18) 100%);
+  border-right: 2px solid #38bdf8;
+  border-radius: 18px 0 0 18px;
+  box-shadow: 0 0 32px 8px rgba(56,189,248,0.18);
+  color: #eaf6ff;
+  padding: 1.5rem 0.5rem;
+}
+
+/* Aero background with 'bubble' light effect */
+.aero-bg-bubbles {
+  background: radial-gradient(circle at 70% 20%, #5ac8fa55 0%, transparent 40%),
+              radial-gradient(circle at 20% 80%, #38bdf855 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, #3399ff33 0%, transparent 70%),
+              var(--background-color) !important;
+}
+
+/* Make all shadows and borders more pronounced for Aero */
+.aero-shadow {
+  box-shadow: 0 12px 48px 8px rgba(56,189,248,0.25), 0 2px 0 0 #fff8 inset;
+}
+
+/* Aero toolbar */
+.aero-toolbar {
+  background: var(--toolbar-bg);
+  border-bottom: 1px solid #b3d8f7;
+  padding: 0.5rem 1.5rem;
+  border-top-left-radius: var(--window-radius);
+  border-top-right-radius: var(--window-radius);
+  font-family: var(--font-family);
+}
+
+/* Aero accent classes */
+.accent-bg {
+  background: linear-gradient(135deg, #3399ff, #e3f0fb) !important;
+  backdrop-filter: blur(8px);
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #1976d2, #b3d8f7) !important;
+}
+
+.accent-text {
+  color: #3399ff !important;
+}
+
+.accent-border {
+  border-color: #3399ff !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #3399ff !important;
+}
+
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(51,153,255,0.18) !important;
+}
+
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(51,153,255,0.25) !important;
+}
+
+/* Aero scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  background: #e3f0fb;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #b3d8f7, #3399ff 80%);
+  border-radius: 8px;
+  border: 2px solid #e3f0fb;
+  box-shadow: 0 1px 4px #b3d8f7 inset;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #3399ff, #1976d2);
+}
+* {
+  scrollbar-color: #3399ff #e3f0fb;
+}
+
+/* Aero glassmorphism (legacy) */
+.aero-morphism {
+  background: var(--window-glass) !important;
+  backdrop-filter: blur(18px);
+  border: 1.5px solid var(--window-border);
+  box-shadow: var(--window-shadow);
+}
+
+/* Aero card/panel (legacy) */
+.aero-card {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(51,153,255,0.12);
+  border-radius: 10px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 32px rgba(51,153,255,0.08);
+}
+
+.aero-panel {
+  background: rgba(221,235,247,0.92);
+  border-radius: 10px;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(51,153,255,0.15);
+  box-shadow: 0 12px 40px rgba(51,153,255,0.10);
+}
+
+.aero-nav {
+  background: linear-gradient(90deg, #e3f0fb 0%, #b3d8f7 100%);
+  border-bottom: 1px solid #b3d8f7;
+  border-radius: 10px 10px 0 0;
+  backdrop-filter: blur(20px);
+}
+
+/* Inputs */
+.aero-input {
+  background: rgba(255,255,255,0.7);
+  border: 1.5px solid #b3d8f7;
+  border-radius: 7px;
+  color: #1b2838;
+  font-family: var(--font-family);
+  padding: 0.5rem 1rem;
+  box-shadow: 0 1px 2px #b3d8f7 inset;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.aero-input:focus {
+  border-color: #3399ff;
+  box-shadow: 0 0 8px 2px #3399ff, 0 1px 2px #b3d8f7 inset;
+  outline: none;
+}
+
+/* General typography */
+body, input, button, select, textarea {
+  font-family: var(--font-family);
+}
+
+.aero-shimmer {
+  animation: aero-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes aero-shimmer {
+  0% { background: rgba(255,255,255,0.10); }
+  50% { background: rgba(255,255,255,0.18); }
+  100% { background: rgba(255,255,255,0.10); }
+}
+
+.frosted-aero {
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(51,153,255,0.18);
+  box-shadow: 0 8px 32px rgba(51,153,255,0.08);
+}
+
+/* Aero dark mode backgrounds for panels/windows */
+.aero-dark-bg {
+  background: linear-gradient(135deg, rgba(56,189,248,0.10) 0%, rgba(24,38,56,0.92) 100%) !important;
+  border: 1.5px solid #38bdf8;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(56,189,248,0.18), 0 1.5px 0 0 #fff1 inset;
+  color: #eaf6ff;
+}
+
+/* Blue/cyan glow for focus/active */
+.aero-dark-glow {
+  box-shadow: 0 0 12px 2px #38bdf8, 0 0 2px 1px #fff1 inset;
+}
+
+/* Glossy green button for highlights */
+.aero-btn-green {
+  background: linear-gradient(180deg, #7fffd4 0%, #38bdf8 100%);
+  color: #003c2e;
+  border: 1.5px solid #7fffd4;
+  border-radius: 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 2px 8px #38bdf8 inset, 0 1.5px 0 0 #fff1 inset;
+  transition: background 0.2s, box-shadow 0.2s, border 0.2s, transform 0.2s;
+}
+.aero-btn-green:hover, .aero-btn-green:focus {
+  background: linear-gradient(180deg, #38bdf8 0%, #7fffd4 100%);
+  border-color: #38bdf8;
+  color: #003c2e;
+  box-shadow: 0 0 8px 2px #7fffd4, 0 2px 8px #38bdf8 inset;
+  outline: none;
+  transform: scale(1.04);
+}
+
+/* Ensure all text is white in dark mode */
+.dark, .dark * {
+  color: #eaf6ff !important;
+}
+
+/* Aero glass/frosted effect for all major containers */
+/* REMOVED GLOBAL OVERRIDES */
+
+/* White highlight/glossy overlay for panels, titlebars, sidebars, modals, cards, header, nav */
+/* REMOVED GLOBAL OVERRIDES */
+
+/* Glossy reflection overlay for buttons */
+/* REMOVED GLOBAL OVERRIDES */
+
+/* Aero bubble overlay for background */
+.aero-bubble-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 70% 20%, #5ac8fa55 0%, transparent 40%),
+              radial-gradient(circle at 20% 80%, #38bdf855 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, #3399ff33 0%, transparent 70%);
+} 

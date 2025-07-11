@@ -1,0 +1,96 @@
+/* Midnight Theme - Global Styles */
+
+:root {
+  --accent-color-value: #2563eb;
+  --accent-color-hover: #1d4ed8;
+  --background-color: #000000;
+}
+
+html, body {
+  background: var(--background-color) !important;
+}
+
+/* Custom scrollbar for midnight theme */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #2563eb, #1e293b);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1d4ed8, #334155);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-color: #2563eb transparent;
+}
+
+/* Enhanced midnight effects */
+.midnight-focus {
+  background: rgba(37, 99, 235, 0.1) !important;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+/* Midnight accent colors for interactive elements */
+.accent-bg {
+  background: linear-gradient(135deg, #2563eb, #1e293b) !important;
+}
+
+.accent-bg-hover:hover {
+  background: linear-gradient(135deg, #1d4ed8, #334155) !important;
+}
+
+.accent-text {
+  color: #2563eb !important;
+}
+
+.accent-border {
+  border-color: #2563eb !important;
+}
+
+.accent-ring {
+  --tw-ring-color: #2563eb !important;
+}
+
+/* Midnight shadows */
+.accent-shadow {
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Enhanced hover effects */
+.hover\:accent-shadow:hover {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Midnight gradients for cards and containers */
+.midnight-gradient {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(30, 41, 59, 0.1));
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+/* Midnight theme specific button styles */
+.midnight-button {
+  background: linear-gradient(135deg, #2563eb, #1e293b);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.midnight-button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #334155);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* High contrast focus indicators */
+.midnight-focus:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Midnight accessibility enhancements */
+.midnight-high-contrast {
+  color: #ffffff !important;
+  background: #000000 !important;
+  border: 1px solid #2563eb !important;
+} 

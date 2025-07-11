@@ -1,0 +1,13 @@
+/* Grape Theme - Dark Mode Styles */
+
+.dark {
+  --background-color: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
+  --surface-color: rgba(49, 46, 129, 0.8);
+  --text-color: #ede9fe;
+  --border-color: #7c3aed;
+}
+
+.dark .grape-vibrant {
+  background: rgba(162, 28, 175, 0.15) !important;
+  border: 1px solid rgba(162, 28, 175, 0.3);
+} 
